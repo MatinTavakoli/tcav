@@ -46,7 +46,7 @@ def make_concepts_targets_and_randoms(source_dir, number_of_images_per_folder, n
         subprocess.call(['bash' , 'FetchDataAndModels.sh', source_dir])
 
     # Determine classes that we will fetch
-    imagenet_classes = ['nautilus']  # testing
+    imagenet_classes = ['chambered nautilus']  # testing
     broden_concepts = ['frilly', 'spiralled', 'woven']  # testing
 
     # make targets from imagenet
