@@ -46,8 +46,8 @@ def make_concepts_targets_and_randoms(source_dir, number_of_images_per_folder, n
         subprocess.call(['bash' , 'FetchDataAndModels.sh', source_dir])
 
     # Determine classes that we will fetch
-    imagenet_classes = ['fish']  # testing
-    broden_concepts = ['salmon', 'poodle', 'fossa']  # testing
+    imagenet_classes = ['snake']  # testing
+    broden_concepts = ['scaly', 'smeared', 'striped']  # testing
 
     # make targets from imagenet
     imagenet_dataframe = fetcher.make_imagenet_dataframe("./imagenet_url_map.csv")
