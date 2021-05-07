@@ -284,7 +284,7 @@ def generate_random_folders(working_directory, random_folder_prefix,
       urls = fetch_all_urls_for_concept(imagenet_dataframe, random_concept)
       for url in urls:
         # We are filtering out images from Flickr urls, since several of those were removed
-        if "flickr" not in url:
+        if "flickr" in url:  # testing
           try:
             download_image(partition_folder_path, url)
             examples_selected += 1
