@@ -244,7 +244,6 @@ class PublicImageModelWrapper(ImageModelWrapper):
                endpoints_dict, scope):
     super(PublicImageModelWrapper, self).__init__(image_shape)
     self.labels = tf.io.gfile.GFile(labels_path).read().splitlines()
-    print(self.labels)
     self.ends = PublicImageModelWrapper.import_graph(
         model_fn_path, endpoints_dict, self.image_value_range, scope=scope)
     self.bottlenecks_tensors = PublicImageModelWrapper.get_bottleneck_tensors(
