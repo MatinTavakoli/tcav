@@ -171,14 +171,14 @@ def fetch_imagenet_class(path, class_name, number_of_images, imagenet_dataframe)
   # Fetch number_of_images images or as many as you can.
   num_downloaded = 0
   for image_url in all_images:
-    # if "flickr" not in image_url:  # testing
-    try:
-      download_image(concept_path, image_url)
-      num_downloaded += 1
+    if "flickr" in image_url:  # testing
+      try:
+        download_image(concept_path, image_url)
+        num_downloaded += 1
 
-    except Exception as e:
-      tf.compat.v1.logging.info("Problem downloading imagenet image. Exception was " +
-                      str(e) + " for URL " + image_url)
+      except Exception as e:
+        tf.compat.v1.logging.info("Problem downloading imagenet image. Exception was " +
+                        str(e) + " for URL " + image_url)
     if num_downloaded >= number_of_images:
       break
 
