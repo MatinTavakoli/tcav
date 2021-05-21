@@ -47,7 +47,7 @@ def make_concepts_targets_and_randoms(source_dir, number_of_images_per_folder, n
 
     # Determine classes that we will fetch
     imagenet_classes = ['armadillo']  # testing
-    broden_concepts = ['scally', 'meshed', 'honeycombed']  # testing
+    broden_concepts = ['scaly', 'meshed', 'honeycombed']  # testing
 
     # make targets from imagenet
     imagenet_dataframe = fetcher.make_imagenet_dataframe("./imagenet_url_map.csv")
